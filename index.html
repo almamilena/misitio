@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+
+    <!-- Enlace a Bootstrap CDN para estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-nzr5pF8eKo5IXrmPPFEp4o4CIftWJNZ9jFAy8dFtF0/7bI1pL3A1sL4NYYo5dF5IQ" crossorigin="anonymous">
+    
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #fff; /* Fondo blanco */
+            color: #000; /* Texto negro */
+        }
+        
+        .jumbotron {
+            background-image: url("https://cdn.pixabay.com/photo/2018/09/27/09/22/artificial-intelligence-3706562_1280.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            color: #fff; /* Texto blanco en el jumbotron */
+            padding: 100px 0;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        .jumbotron::before {
+            content: "";
+            background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .navbar {
+            background-color: #58B2AF; /* Color del menú */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipo.html">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Noticias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1 class="display-4">Bienvenido a mi sitio web</h1>
+        <p class="lead">Un lugar para descubrir y aprender.</p>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Título del Contenido</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac libero velit.</p>
+                <p>Phasellus nec massa id lorem accumsan lacinia. Vestibulum vel lacus vitae dolor tincidunt eleifend.</p>
+                <p>Curabitur sed libero quis justo blandit suscipit. Sed euismod elit vitae nulla gravida hendrerit.</p>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/K5pkkuiyRzk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a Bootstrap y scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua8b8TBth5f3Y5u6rKwGX/KfAVpV0/ReZxW2tcR5SmBcF8Uk2mHJEWz8jB3" crossorigin="anonymous"></script>
+</body>
+</html>

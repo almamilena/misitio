@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+
+    <!-- Enlace a Bootstrap CDN para estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-nzr5pF8eKo5IXrmPPFEp4o4CIftWJNZ9jFAy8dFtF0/7bI1pL3A1sL4NYYo5dF5IQ" crossorigin="anonymous">
+    
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #fff; /* Fondo blanco */
+            color: #000; /* Texto negro */
+        }
+        
+        .navbar {
+            background-color: #58B2AF; /* Color del menú */
+        }
+
+        .jumbotron {
+            background-color: #58B2AF;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            background-color: #58B2AF; /* Color de las flechas */
+        }
+
+        .carousel-indicators {
+            border-color: #58B2AF; /* Color del borde de los indicadores */
+        }
+
+        .carousel-inner img {
+            max-width: 400px; /* Tamaño mediano de las imágenes */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .news-text {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para texto de noticias */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación (mismo menú que en la página de inicio) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipo.html">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Noticias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron con carrusel de noticias -->
+    <div class="jumbotron">
+        <h1>Últimas Noticias</h1>
+        <div id="noticiasCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#noticiasCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#noticiasCarousel" data-slide-to="1"></li>
+                <li data-target="#noticiasCarousel" data-slide-to="2"></li>
+                <li data-target="#noticiasCarousel" data-slide-to="3"></li>
+                <li data-target="#noticiasCarousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/noticia1.jpg" alt="Noticia 1">
+                    <div class="carousel-caption news-text">
+                        <h3>Noticia 1</h3>
+                        <p>Descripción de la Noticia 1.</p>
+                        <a href="#" data-toggle="modal" data-target="#modalNoticia1">Ver más</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/noticia2.jpg" alt="Noticia 2">
+                    <div class="carousel-caption news-text">
+                        <h3>Noticia 2</h3>
+                        <p>Descripción de la Noticia 2.</p>
+                        <a href="#" data-toggle="modal" data-target="#modalNoticia2">Ver más</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/noticia3.jpg" alt="Noticia 3">
+                    <div class="carousel-caption news-text">
+                        <h3>Noticia 3</h3>
+                        <p>Descripción de la Noticia 3.</p>
+                        <a href="#" data-toggle="modal" data-target="#modalNoticia3">Ver más</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/noticia4.jpg" alt="Noticia 4">
+                    <div class="carousel-caption news-text">
+                        <h3>Noticia 4</h3>
+                        <p>Descripción de la Noticia 4.</p>
+                        <a href="#" data-toggle="modal" data-target="#modalNoticia4">Ver más</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/noticia5.jpg" alt="Noticia 5">
+                    <div class="carousel-caption news-text">
+                        <h3>Noticia 5</h3>
+                        <p>Descripción de la Noticia 5.</p>
+                        <a href="#" data-toggle="modal" data-target="#modalNoticia5">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#noticiasCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#noticiasCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Modales para las noticias -->
+    <!-- Modal Noticia 1 -->
+    <div class="modal fade" id="modalNoticia1" tabindex="-1" role="dialog" aria-labelledby="modalNoticia1Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNoticia1Label">Noticia 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Contenido detallado de la Noticia 1.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agregar modales para las otras noticias (Noticia 2, 3, 4 y 5) de manera similar -->
+
+    <!-- Enlace a Bootstrap y scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua8b8TBth5f3Y5u6rKwGX/KfAVpV0/ReZxW2tcR5SmBcF8Uk2mHJEWz8jB3" crossorigin="anonymous"></script>
+</body>
+</html>
+
